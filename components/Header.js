@@ -17,6 +17,7 @@ import {
   VideoCameraIcon,
 } from "@heroicons/react/outline";
 import { signIn, signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 
 const Header = () => {
   //session from next-auth
@@ -26,7 +27,9 @@ const Header = () => {
     <div className="sticky top-0 z-10 flex bg-white px-4 py-2 shadow-sm items-center">
       {/* logo */}
       <div className="relative h-10 w-20 flex-shrink-0 cursor-pointer">
-        <Image src={logo} layout="fill" objectFit="contain" alt="logo" />
+        <Link href="/">
+          <Image src={logo} layout="fill" objectFit="contain" alt="logo" />
+        </Link>
       </div>
       {/* home */}
       <div className="flex items-center mx-7 xl:min-w-[300px]">
